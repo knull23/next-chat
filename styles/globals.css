@@ -1,0 +1,69 @@
+/* Global Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic Typography and Body Styles */
+html {
+  font-size: 16px; /* Set a base font size for responsiveness */
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Better fallback stack */
+  line-height: 1.6; /* Improved readability */
+  color: #333; /* Dark gray for better text visibility */
+  background-color: #f9f9f9; /* Light background for less strain */
+  min-height: 100vh; /* Full viewport height */
+  display: flex;
+  flex-direction: column; /* Align child elements like header and footer */
+}
+
+/* Anchor tags */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
+}
+
+a:hover,
+a:focus {
+  color: #3498db; /* Blue color for links on hover */
+  text-decoration: underline; /* Subtle underline effect */
+}
+
+/* Layout Flexbox and Grid */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto; /* Center align container */
+}
+
+/* Box Model Improvements */
+*::before,
+*::after {
+  box-sizing: inherit; /* Inherit box-sizing property */
+}
+
+/* Utility Classes */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px; /* Further adjust font size for mobile screens */
+  }
+}
